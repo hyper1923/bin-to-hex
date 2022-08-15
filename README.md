@@ -4,4 +4,4 @@
   ```sh
   bin-to-hex [DATA.TXT] [OUTPUT.TXT]
   ```
-  tada! probably your file have created.
+  tada! probably your file has been created.
