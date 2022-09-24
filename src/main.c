@@ -6,14 +6,23 @@
 void start_dumping(char* argv1,char* argv2){
     FILE* f = fopen(argv1,"r");
     if(!f){printf("\nFile not found\n"); return;}
-    unsigned char *data = (char*)malloc(1024*32);
     unsigned int i = 0;
     while(!feof(f)){
-        data[i] = fgetc(f);
+        fgetc(f);
         i++;
     }
+    unsigned char *data = (char*)malloc(i);
     data[i+1] = '\0';
     fclose(f);
+
+    f = fopen(argv1,"r");
+    unsigned int c = 0;
+    while(c < i){
+        data[c] = fgetc(f);
+        c++;
+    }
+
+    
     f = fopen(argv2, "w");
     i--;
     unsigned int g = 0;
