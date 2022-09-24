@@ -1,1 +1,1 @@
-./utf8-to-hex.exe ../examples/data.txt ../examples/output.txt
+./a.out ../examples/a.out ../examples/output.txt
